@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React ,{Component} from 'react';
+import {Header , Slider} from '../src/components/header'
+import Categories from '../src/components/categoryMenu';
+import Product from '../src/components/product';
+import Advatisment from './components/advatisment'
+import {Footer,Belowfooter} from './components/footer';
+import postAdd from './components/postAdd';
+import {BrowserRouter as Router , Route , Link} from 'react-router-dom';
+import AppRouter from './components/router';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends Component{
+  render(){
+    return(
+      <div>
+        <AppRouter/>
+      </div>
+      
+      
+    )
+  }
 }
 
 export default App;

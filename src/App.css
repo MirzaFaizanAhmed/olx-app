@@ -1,38 +1,482 @@
-.App {
+
+.header{
+  width: 100%;
+  background-color: cyan;
+  padding: 10px 0px;
+}
+.olxlogo{
+  margin: 2px 20px;
+}
+.olxlogo img{
+  width: 50px;
+  margin: 10px 0 0 5px;
+}
+.locationSearch{
+  border: 2px solid black;
+  width: 240;
+  height: 45px;
+  margin: 0 10px;
+  padding: 0 5px;
+  background-color: #fff;
+  border-radius: 3px;
+}
+.locationSearch .locationInput{
+  border: none;
+  margin: 5px 2px 0 2px;
+  padding: 4px 0;
+}
+.locationSearch .locationInput:focus{
+  outline: none;
+}
+.locationSearchIcon{
+  font-size: 18px;
+  margin-right: 6px;
+  font-weight: lighter;
+}
+.search{
+  width: 550px !important;
+  padding: 0;
+  margin:0 10px;
+  background-color: #fff;
+}
+.search .searchInput{
+  width: 501px;
+  margin: 8px 2px 0 5px;
+  border: none;
+}
+.search .searchInput:focus{
+  outline: none;
+}
+.searchIconsearch{
+  background-color: #002F34;
+  padding: 11px 9px;
+}
+.searchIconsearch .searchIcon{
+  color: #fff;
+  font-size: 20px;
+}
+.userImage img{
+  width: 27px;
+  margin: 0 15px 5px 15px;
+
+}
+.headerIcons{
+  margin: 0 3px;
+}
+.Hicon{
+  font-size: 25px;
+  margin: 8px 15px 0 15px;
+}
+.sell{
+  margin-left: 20px;
+}
+.sellBtn {
+  width: 100px;
+  background-image: linear-gradient(115deg, #4fcf70, #fad648, #a767e5, #12bcfe, #44ce7b);
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+  color: #000;
+  text-decoration: none;
+  display: block;
+  font-weight: bold;
+  border-radius: 40px;
+  overflow: hidden;
+}
+.sellBtn span {
+  padding: 5px 0;
+  font-size: 15px;
+  display: block;
+  margin: 5px;
+  text-decoration: none;
+  background: #fff;
+  border-radius: 40px;
+}
+.sellIcon{
+  font-size: 15px;
+  margin-right: 5px;
+}
+.slider{
+  margin-bottom: 80px;
+}
+.slider img{
+  width: 100%;
+  height: 250px;
+}
+@media only screen and (max-width: 640px) {
+  /* .olxlogo{
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .search{
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  } */
+  .search , .locationSearch{
+    display: none;
+  }
+  .sell{
+    float: right;
+  }
+  .headerIcons{
+    float: right;
+  }
+
+}
+
+.categories{
+  list-style: none;
+  margin-top: 10px;
+}
+.allCategories{
+  padding-right: 20px;
+  font-weight: bold;
+}
+.allCategories:hover{
+  color: #000 !important;
+}
+.categories li{
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 15px;
+  cursor: pointer;
+}
+.categories li:hover{
+  color: #00A49F;
+}
+
+.card{
+  margin: 30px 0;
+  width: 250px;
+  height: 280px;
+}
+.cardImage{
+  width: 100%;
+  height: 150px;
+  padding: 0 60px 10px 60px;
+}
+.cardImage img{
+  width: 150px
+}
+.productMain{
+ background-color: ;
+}
+.cardContent {
+  border-right: 5px solid #FFCE32;
+  border-left: 5px solid #FFCE32;
+  padding: 10px 10px;
+}
+.cardContent span{
+  display: block;
+}
+.productDetails span{
+  display: block;
+}
+.cardfooter {
+  margin-top: 20px;
+}
+.cardfooter span{
+  display: inline-block;
+}
+.ProductPrice{
+  font-size: 23px;
+  font-weight: bold;
+}
+.ProductName{
+  font-size: 16;
+}
+.ProductLocation{
+  font-size: 13px;
+}
+.UploadTime{
+  font-size: 13px;
+  float: right;
+}
+
+
+.advatisment{
+  margin-top: 80px;
+  background-color: #F7F8F9;
+  padding: 40px  0 0 0;
+}
+.advatisment1 {
+  border-right: 2px solid #C6CFD1;
+  height: 150px;
+}
+.advatisment1 h2{
+  font-weight: bold;
+  font-size: 35px;
+}
+.advatisment1 p{
+  font-size: 13px;
+}
+.advatisment2 {
+  padding-top: 30px;
+  margin-left: 10px;
+}
+.advatisment2 h4{
+  font-weight: bold;
+  font-size: 18px;
+  color: #002F34;
+}
+.advatisment2 img{
+  width: 120px;
+  margin: 10px 5px 0 0;
+}
+
+
+.footer1 , .footer2 , .footer3 , .footer4 , .footer5{
+  text-align: left;
+}
+.footer1 ul li , .footer2 ul li , .footer3 ul li , .footer4 ul li , .footer5 ul li{
+  list-style: none;
+  margin: 0 ;
+  color: #7A2F34;
+  font-size: 12px;
+ 
+}
+.footer{
+  background: #EBEEEF;
+  padding: 20px 0;
+  border-top: 1px solid #BCC7C9;
+}
+.footer h5{
+  font-size: 14px;
+  font-weight: bold;
+}
+.footer5 ul li{
+  display: inline-block;
+  margin: 0 3px;
+}
+.footer5 img{
+  width: 90px;
+  margin-right: 10px;
+}
+
+.belowFooter{
+  background-color: #002F34 ;
+  padding: 10px 0px;
+}
+.belowFooterBold{
+  font-weight: bold;
+  font-size: 13px;
+  margin-right: 19px;
+}
+.belowFooter span{
+  font-size: 13px;
+  color: #fff;
+}
+
+
+
+
+
+.formHeader div{
+  background: cyan;
+  padding: 20px 30px;
+}
+.formHeader img{
+  width: 40px;
+}
+.formHeader span{
+  font-size: 20px;
+  font-weight: lighter;
+  margin-right: 30px;
+  color: black;
+}
+.AddForm{
+  width: auto;
+  height: auto;
+  padding: 40px 0;
+  margin: 30px 0;
+  border: 1px solid #CCD5D6;
+  display: block;
+}
+.postAddHeading{
+  text-align: center;
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.categoryHeading{
+  margin: 10px 0 30px 0;
+}
+.categoryHeading h5{
+  font-size: 16px;
+  font-weight: bold;
+}
+.categoryDiv{
+  border: 1px solid #CCD5D6;
+  width: 400px;
+  padding: 5px 0;
+}
+.AddForm .categoryIcon{
+  font-size: 20px;
+  margin: 0 30px 0 10px;
+  color: #566573;
+}
+
+.AddForm .subcategoryIcon{
+  float: right;
+  margin : 5px 15px ;
+  font-size: 20px;
+  color: #566573;
+}
+.AddForm .categoryName{
+  font-size: 17px;
+  color: #566573;
+}
+.categoryDiv:hover{
+  background-color: #CCD5D6;
+}
+
+
+
+
+.Form{
+  border: 1px solid #CCD5D6;
+  display: block;
+  margin: 20px 0;
+}
+.Form input{
+  width: 400px;
+  height: 50px;
+  border-radius: 3px;
+  border:1px solid #ADBCBE;
+  margin-bottom: 10px;
+}
+.Form input:focus , .Form textarea:focus{
+  outline: none;
+  border: 2px solid #ADBCBE;
+}
+.Form textarea{
+  width: 400px;
+  border-radius: 3px;
+  border:1px solid #ADBCBE;
+}
+.Details{
+  border: 1px solid #CCD5D6;
+  padding: 30px 20px;
+}
+.Details span{
+  display: block;
+  margin-top: 20px;
+}
+.Details img{
+  width: 40px;
+  border-radius: 50px;
+}
+.Details h5{
+  font-size: 18px;
+  font-weight: bold;
+}
+.conditionBtn{
+  padding: 5px 12px;
+  margin-right: 10px;
+  background: #fff;
+  border: 1px solid #000;
+  border-radius: 3px;
+  margin-top: 10px;
+}
+.conditionBtn:focus{
+  outline: none;
+  background: #C8F8F6;
+  border: 2px solid #00A49F;
+}
+.postNowBtn{
+  padding: 8px 16px;
+  border: 1px solid #00A49F;
+  border-radius: 3px;
+  background: #fff;
+}
+.postNowBtn:focus{
+  background: #002F34;
+  color: #fff;
+  outline: none;
+}
+.addHeading{
+  text-align: center;
+  margin: 30px 0;
+}
+.addHeading h5{
+  font-size: 18px;
+  font-weight: bold;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+
+
+
+.header_dropdown {
+  width: 250px; 
+  height: 45px;
+  border: 2px solid black;
+  border-radius: 3px;
+}
+.search-location-icon{
+  font-size: 23px;
+  margin-top: 7px;
+  color: grey;
+  font-weight:lighter;
+}
+.search{
+  width: 500px;
+  height: 45px;
+  border: 2px solid black;
+  border-radius: 3px;
+}
+.search_icon_div{
+  height: 42px;
+  background-color: black;
+}
+.search-icon{
+  margin-top: 8px;
+  font-size: 20px;
+  color: #fff;
+}
+.location-down-arrow{
+  font-size: 20px;
+  margin-top: 8px;
+  transition: all 0.8s ease-in-out;
+}
+.location-down-arrow:hover{
+  transform: rotate(180deg);
+}
+.dropdown{
+  padding: 3px 20px;
+  font-size: 16px;
+}
+.header-icons span{
+  font-size: 25px;
+  margin: 0 4px;
+}
+.user{
+  width: 30px;
+}
+.sell-button {
+  width: 100px;
+  background-image: linear-gradient(115deg, #4fcf70, #fad648, #a767e5, #12bcfe, #44ce7b);
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+  color: black;
+  text-decoration: none;
+  display: block;
+  font-weight: normal;
+  border-radius: 30px;
+  overflow: hidden;
+}
+.sell-button span {
+  padding: 8px 0;
+  font-size: 22px;
+  display: block;
+  margin: 3px;
+  background: #fff;
+  border-radius: 3px;
 }
