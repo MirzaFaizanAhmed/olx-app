@@ -58,7 +58,7 @@
 .userImage img{
   width: 27px;
   margin: 0 15px 5px 15px;
-
+  border-radius: 50px;
 }
 .headerIcons{
   margin: 0 3px;
@@ -68,7 +68,7 @@
   margin: 8px 15px 0 15px;
 }
 .sell{
-  margin-left: 20px;
+  margin-left: 10px;
 }
 .sellBtn {
   width: 100px;
@@ -101,7 +101,7 @@
 }
 .slider img{
   width: 100%;
-  height: 250px;
+  height: 30%;
 }
 @media only screen and (max-width: 640px) {
   /* .olxlogo{
@@ -147,14 +147,19 @@
 }
 
 .card{
-  margin: 30px 0;
+  margin: 30px 30px;
   width: 250px;
-  height: 280px;
+  height: auto;
+  cursor: pointer;
+  text-decoration: none;
+  color: #000;
 }
 .cardImage{
   width: 100%;
   height: 150px;
+  margin-top: 10px;
   padding: 0 60px 10px 60px;
+  margin-bottom: 10px;
 }
 .cardImage img{
   width: 150px
@@ -189,7 +194,7 @@
 .ProductLocation{
   font-size: 13px;
 }
-.UploadTime{
+.UploadDate{
   font-size: 13px;
   float: right;
 }
@@ -308,9 +313,21 @@
 }
 .categoryDiv{
   border: 1px solid #CCD5D6;
-  width: 400px;
+  width: 40%;
   padding: 5px 0;
 }
+@media only screen and (max-width: 990px){
+  .categoryDiv{
+    width: 100%;
+  }
+  .categoryName{
+    font-size: 10px;
+  }
+  .categoryIcon{
+    font-size: 12px;
+  }
+}
+
 .AddForm .categoryIcon{
   font-size: 20px;
   margin: 0 30px 0 10px;
@@ -340,20 +357,30 @@
   margin: 20px 0;
 }
 .Form input{
-  width: 400px;
+  width: 45%;
   height: 50px;
+  padding: 10px;
+  font-size: 20px;
   border-radius: 3px;
   border:1px solid #ADBCBE;
   margin-bottom: 10px;
 }
+
 .Form input:focus , .Form textarea:focus{
   outline: none;
   border: 2px solid #ADBCBE;
 }
 .Form textarea{
   width: 400px;
+  padding: 10px;
+  font-size: 20px;
   border-radius: 3px;
   border:1px solid #ADBCBE;
+}
+@media only screen and (max-width: 640px){
+  .Form input , .Form textarea{
+    width: 100%;
+  }
 }
 .Details{
   border: 1px solid #CCD5D6;
@@ -407,6 +434,105 @@
 
 
 
+
+
+
+
+
+.add{
+  padding: 0 10%;
+}
+.add .col img{
+  width: 100%;
+}
+.productDdtailsDiv{
+  margin-top: 80px;
+}
+.productImg{
+  width: 100%;
+  height: auto;
+  background: #000;
+  padding: 40px 100px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  margin-left: 10px;
+}
+.productImg img{
+  width: 90%;
+  border-radius: 10px;
+}
+
+.PriceDetails , .SellerDescription , .PostedLocation{
+  border: 1px solid #00A49F;
+  height: auto;
+  padding: 8px;
+  margin: 3px 5px 0 0;
+}
+
+.PriceDetails h4{
+  font-size: 30px;
+  font-weight: bold;
+}
+.share , .heart{
+  font-size: 20px;
+  margin: 5px;
+} 
+.PriceDetails .title p{
+  font-size: 17px;
+}
+.location p{
+  font-size: 13px;
+}
+.day p{
+  font-size: 13px;
+}
+.SellerDescription .SDHeading p{
+  font-size: 22px;
+}
+.SellerDescription .SellerImg{
+  font-size: 50px;
+  color: #002F34;
+}
+.SellerDescription .SellerName p {
+  font-size: 20px;
+  font-weight: bold;
+}
+.SellerDescription .LiveChatBtn {
+  margin: 10px;
+}
+.SellerDescription .LiveChatBtn button{
+  width: 80%;
+  padding: 7px;
+  font-size: 15px;
+  font-weight: bold;
+  border: none;
+  background: #002f34;
+  color: #fff;
+}
+.SellerDescription .LiveChatBtn button:hover{
+  border: 3px solid #002f34;
+  background: #fff;
+  color: #000;
+}
+.PostedLocation .PLHeading p{
+  font-size: 20px;
+  font-weight: bold;
+}
+.PostedLocation .PLLocation p{
+  font-size: 14px;
+}
+.PostedLocation .PLMap img{
+  width: 98%;
+}
+.Description{
+  border: 1px solid #00A49F;
+  margin-left: 10px;
+  padding: 20px 10px;
+  margin-bottom: 100px;
+}
+.detailsProduct{
+  margin-bottom: 100px;
+}
 
 
 

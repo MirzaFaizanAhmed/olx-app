@@ -5,7 +5,7 @@ class PostYourAdd extends Component {
     render(){
         return(
            <div>
-               <FormHeader />
+               <FormHeader link = "/" />
                <Form />
            </div> 
         )

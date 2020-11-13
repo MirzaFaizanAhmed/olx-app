@@ -7,12 +7,48 @@ import user from '../images/user.png';
 import slider from '../images/slider.jpg';
 import style from  '../App.css';
 import {Link } from 'react-router-dom';
+import firebase from '../config/firebase'
+import { AlternateEmail } from '@material-ui/icons';
+
 
 
 class Header extends Component{
+
+    constructor(){
+        super()
+        this.state = {
+            isLogin : false,
+            name : "",
+            photo: ""
+        }
+    }
+    onSubmit = () =>{
+        var provider = new firebase.auth.GoogleAuthProvider();
+        firebase.auth().signInWithPopup(provider).then(function(result) {
+    
+            var token = result.credential.accessToken;
+            
+            var user = result.user;
+            
+          })
+          .catch(function(error) {
+           console.log(error)
+          });
+    }
+
+    componentDidMount = () =>{
+        firebase.auth().onAuthStateChanged(function(user){
+            if(user){
+                console.log(user.displayName + "   " + user.email + '   '+ user.photoURL);
+            }
+            else {
+                console.log("not signin")
+            }
+        })
+    }
     render(){
         return(
-            <div className = "container-fluid header sticky">
+            <div className = "container-fluid header">
                 <div className="row">
                     <div className = "olxlogo">
                         <img src={logo} alt=""/>
@@ -32,12 +68,14 @@ class Header extends Component{
                     <div className="headerIcons">
                         <span><FontAwesomeIcon className="Hicon" icon={faComment} /></span>
                         <span><FontAwesomeIcon className="Hicon" icon={faBell} /></span>
-                        <span className="userImage"><img src={user} alt=""/></span>
+                        <span className="userImage"><img src={this.state.photo} alt=""/></span> 
+                        
                         <span><FontAwesomeIcon className="Hicon" icon={faChevronDown} /></span>
                     </div>
                     <div className="sell">
                     <a href="#" class="sellBtn">
-                        <Link to="/PostYourAdd"><span><FontAwesomeIcon className="sellIcon" icon={faPlus} />SELL</span></Link>
+                        
+                        <Link to="/PostYourAdd"><span onClick={this.onSubmit}><FontAwesomeIcon className="sellIcon" icon={faPlus} />SELL</span></Link>
                     </a>
                     </div>
                 </div>

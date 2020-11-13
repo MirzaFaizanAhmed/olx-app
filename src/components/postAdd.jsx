@@ -9,11 +9,12 @@ import {Footer , Belowfooter} from './footer';
 
 
 class FormHeader extends Component {
+    
     render(){
         return(
             <div className="container-fluid formHeader">
                <div className="row">
-                   <Link to="/"><span><FontAwesomeIcon icon ={faArrowLeft}/></span></Link> 
+                   <Link to={this.props.link}><span><FontAwesomeIcon icon ={faArrowLeft}/></span></Link> 
                    <img src={logo} alt=""/>
                </div>
             </div>
