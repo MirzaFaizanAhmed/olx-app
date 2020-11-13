@@ -14,14 +14,7 @@ import { AlternateEmail } from '@material-ui/icons';
 
 class Header extends Component{
 
-    constructor(){
-        super()
-        this.state = {
-            isLogin : false,
-            name : "",
-            photo: ""
-        }
-    }
+
     onSubmit = () =>{
         var provider = new firebase.auth.GoogleAuthProvider();
         firebase.auth().signInWithPopup(provider).then(function(result) {
@@ -68,7 +61,7 @@ class Header extends Component{
                     <div className="headerIcons">
                         <span><FontAwesomeIcon className="Hicon" icon={faComment} /></span>
                         <span><FontAwesomeIcon className="Hicon" icon={faBell} /></span>
-                        <span className="userImage"><img src={this.state.photo} alt=""/></span> 
+                        <span className="userImage"><img src={user} alt=""/></span> 
                         
                         <span><FontAwesomeIcon className="Hicon" icon={faChevronDown} /></span>
                     </div>
